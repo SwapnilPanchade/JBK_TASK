@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Practice</title>
+
+    <style>
+      h2 {
+        color: brown;
+      }
+
+      #box2 {
+        border: 2px;
+        border-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>This is dom Practice</h2>
+
+    <button onclick="btn()">Click the button</button>
+
+    <div
+      id="box"
+      onmouseover="onMouse()"
+      onmouseout="mouseOut()"
+      onclick="clicked()"
+    >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos velit
+      assumenda magnam quia explicabo suscipit tenetur? Beatae est aut id velit
+      impedit facere corporis assumenda ab ad, accusantium eos omnis?
+    </div>
+
+    <hr />
+    <h3>Assignment</h3>
+
+    <br />
+    <br />
+    <br />
+    <select name="dropdown2" id="select" onchange="changeBoxColor()">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="aqua">Aqua</option>
+    </select>
+    <div id="box2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      itaque consequuntur quas eaque aliquam numquam porro rerum exercitationem
+      laudantium. Consectetur, sunt iste? Tenetur esse quos eos adipisci quidem
+      omnis fugit!
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

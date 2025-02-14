@@ -1,0 +1,6 @@
+.idea
+.vscode
+
+.qodo
+.env
+*.log
