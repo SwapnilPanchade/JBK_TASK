@@ -1,0 +1,10 @@
+.basic {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.classic {
+  color: red;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}

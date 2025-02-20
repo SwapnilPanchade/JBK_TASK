@@ -35,3 +35,32 @@
 <input type="text" name="num1" [(ngModel)]="num1" />
 
 <p>{{ num1 }}</p>
+
+<p>
+  ********************************************************************************
+</p>
+
+<p>Table for 5 students with ngfor</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>age</th>
+      <th>course</th>
+      <th>marks</th>
+      <th>action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let std of student">
+      <td>{{ std.id }}</td>
+      <td>{{ std.name }}</td>
+      <td>{{ std.age }}</td>
+      <td>{{ std.course }}</td>
+      <td>{{ std.marks }}</td>
+    </tr>
+  </tbody>
+</table>

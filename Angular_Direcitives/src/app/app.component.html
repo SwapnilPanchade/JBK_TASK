@@ -1,0 +1,52 @@
+<h2>Angualr derivatives</h2>
+<h5>ngstyle</h5>
+<button (click)="click()">colour</button>
+<p [ngStyle]="{ color: textColor, 'font-size': textFont }">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam blanditiis
+  nesciunt aspernatur cum tempora corrupti repellendus earum quidem dignissimos
+  sunt iure nisi ab, vitae atque nulla error, adipisci illum?
+</p>
+
+<p>**********************************************************************</p>
+
+<h5>ngClass</h5>
+
+<p [ngClass]="{'basic':isBasic, 'classic':!isBasic }">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam ducimus dolor dicta adipisci consectetur! Cupiditate ex doloribus cum, reiciendis fugit laboriosam incidunt nemo quo. Tempore quae non nobis ratione nam!</p>
+
+<p>**********************************************************************</p>
+<button (click)="toggle()">{{ isDisplay ? "hide" : "show" }}</button>
+
+<h1 *ngIf="isDisplay">{{ title }}</h1>
+
+<h1>ngfor</h1>
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<h2>ngSwitch</h2>
+
+<!-- <div [ngSwitch]="pgNum"></div>
+<p *ngSwitch="1">pg 1</p>
+<p *ngSwitch="3">pg 3</p>
+<p *ngSwitch="2">pg 2</p>
+<p *ngSwitchDefault="">Def</p> -->
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <ng-container *ngfor="let std of Student">
+        <td>
+          {{ std.id }}
+        </td>
+        <td>{{ std.name }}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
