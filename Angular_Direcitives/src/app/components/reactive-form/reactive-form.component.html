@@ -1,0 +1,43 @@
+<form [formGroup]="user" (ngSubmit)="registerUser()">
+  <label for="username"> username </label>
+  <input type="text" id="text" formControlName="username" />
+  <br />
+  <br />
+  <span
+    *ngIf="
+      user.controls['username'].invalid && user.controls['username'].touched
+    "
+    >This username must be 3 chars</span
+  >
+  <label for="password"> password </label>
+  <input type="text" id="password" formControlName="password" />
+  <br />
+  <br />
+  <span
+    *ngIf="
+      user.controls['password'].invalid && user.controls['password'].touched
+    "
+  >
+    Password is invalid at least 8 chars</span
+  >
+  <label for="email"> email </label>
+  <input type="text" id="email" formControlName="email" />
+  <br />
+  <br />
+  <span
+    *ngIf="user.controls['email'].invalid && user.controls['email'].touched"
+  >
+    email should be proper</span
+  >
+
+  <label for="age"> age </label>
+  <input type="text" id="age" formControlName="age" />
+  <br />
+  <span *ngIf="user.controls['age'].invalid && user.controls['age'].touched">
+    Age should be above 18</span
+  >
+  <br />
+  <br />
+
+  <button [disabled]="user.invalid" type="submit">register</button>
+</form>
